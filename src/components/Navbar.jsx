@@ -6,11 +6,11 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
     }, [menuOpen]);
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-emerald-300 shadow-lg">
+    <nav className="fixed top-0 w-full z-40 bg-[rgba(10, 10, 10, 0.8)] backdrop-blur-lg border-b border-green-500 shadow-lg">
       <div className="max-w-5xl m-auto px-4">
         <div className="flex justify-between items-center h-16">
           <a href="#home" className="font-mono text-xl font-bold text-white relative z-30"> 
-            Joohhhnnnn<span className="text-emerald-300">_v</span> 
+            Joohhhnnnn<span className="text-green-500">_v</span> 
           </a>
 
           <div className={`w-7 h-5 relative cursor-pointer z-30 md:hidden transition-opacity duration-300
@@ -20,16 +20,16 @@ export const Navbar = ({menuOpen, setMenuOpen}) => {
           </div>
 
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-gray-300 hover:text-emerald-300 transition-colors">
+            <a href="#home" className="text-gray-300 hover:text-green-500 transition-colors">
               Home
             </a>
-            <a href="#about" className="text-gray-300 hover:text-emerald-300 transition-colors">
+            <a href="#about" className="text-gray-300 hover:text-green-500 transition-colors">
               About
             </a>
-            <a href="#projects" className="text-gray-300 hover:text-emerald-300 transition-colors">
+            <a href="#projects" className="text-gray-300 hover:text-green-500 transition-colors">
               Projects
             </a>
-            <a href="Contact" className="text-gray-300 hover:text-emerald-300 transition-colors">
+            <a href="Contact" className="text-gray-300 hover:text-green-500 transition-colors">
               Contact
             </a>
           </div>
