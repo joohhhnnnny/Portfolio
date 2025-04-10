@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { LoadingScreen } from './components/Loadingscreen';
 import { Navbar } from './components/Navbar';
 import { MobileMenu } from './components/MobileMenu';
+import { Home } from './components/sections/Home';
 import "./index.css";
 
 function App() {
@@ -11,7 +12,7 @@ function App() {
 
   return (
     <>
-      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{""}
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}
       <div 
         className={`min-h-screen transition-opacity duration-700 ${
           isLoaded ? "opacity-100" : "opacity-0"
@@ -19,6 +20,7 @@ function App() {
       >
         <Navbar menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
         <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen}/>
+        <Home />
       </div>
     </>
   )
