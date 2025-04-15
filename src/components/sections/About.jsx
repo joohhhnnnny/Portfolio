@@ -53,8 +53,22 @@ export const About = () => {
             </div>
           </div>
         </div>
-        </div>
+      </div>
 
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+              <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                  <h3 className="text-xl font-bold mb-4">
+                    <span className="mr-2">🎓</span>
+                    Education
+                  </h3>
+              </div>
+              <div className="p-6 rounded-xl border-white/10 border hover:-translate-y-1 transition-all">
+                  <h3 className="text-xl font-bold mb-4">
+                    <span className="mr-2">💼</span>
+                    Work Experience
+                  </h3>
+              </div>
+        </div>
       </div>  
     </section>
   );
