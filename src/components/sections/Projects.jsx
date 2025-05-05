@@ -12,6 +12,12 @@ export const Projects = () => {
 
           <div>
             <h3> Cloud Platform </h3>
+            <p>
+              Scalable cloud platform for deploying and managing applications.
+            </p>
+            {/* <div>
+                {[].map()}
+            </div> */}
           </div>
 
         </div>

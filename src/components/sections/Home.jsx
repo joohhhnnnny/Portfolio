@@ -5,9 +5,14 @@ export const Home = () => {
       className="min-h-screen flex items-center justify-center relative"
     >
       <div className="text-center z-10 px-4 flex flex-col items-center">
-        <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent leading-right">
-          Hi, It's John Benedict Bongcac
-        </h1>
+        
+        <div className="animate-diagonal w-20 h-20 bg-purple-500"></div>
+        
+        <div className="animate-diagonal">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent leading-right">
+            Hi, It's John Benedict Bongcac
+          </h1>
+        </div>
 
         <p className="text-gray-400 text-lg mb-2 whitespace-nowrap font-semibold">
           Computer Science student at the University of Mindanao
