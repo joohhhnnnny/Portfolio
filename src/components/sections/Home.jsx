@@ -1,23 +1,41 @@
+import { useState, useEffect } from 'react';
+import '../../styles/typing-animation.css';
+
 export const Home = () => {
+  const [text, setText] = useState("");
+  const fullText = "Hi, It's John Benedict Bongcac";
+
+  useEffect(() => {
+    let index = 0;
+    const interval = setInterval(() => {
+      setText(fullText.substring(0, index));
+      index++;
+
+      if (index > fullText.length) {
+        clearInterval(interval);
+      }
+    }, 100);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section 
       id="home" 
-      className="min-h-screen flex items-center justify-center relative"
+      className="relative flex items-center justify-center min-h-screen"
     >
-      <div className="text-center z-10 px-4 flex flex-col items-center">
+      <div className="z-10 flex flex-col items-center px-4 text-center">
         
-        <div className="animate-diagonal w-20 h-20 bg-purple-500"></div>
-        
-        <div className="animate-diagonal">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent leading-right">
-            Hi, It's John Benedict Bongcac
+        <div className="typing-container">
+          <h1 className="mb-6 text-5xl font-bold text-transparent md:text-7xl bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text">
+            {text}<span className="animate-blink-ml1 border-r-[3px] border-purple-500">|</span>
           </h1>
         </div>
 
-        <p className="text-gray-400 text-lg mb-2 whitespace-nowrap font-semibold">
+        <p className="mb-2 text-lg font-semibold text-gray-400 whitespace-nowrap">
           Computer Science student at the University of Mindanao
         </p>
-        <p className="text-gray-600 text-lg mb-8 whitespace-nowrap font-light">
+        <p className="mb-8 text-lg font-light text-gray-600 whitespace-nowrap">
           Software Developer | Machine Learning Enthusiast | Artificial Intelligence
         </p>
         <div className="flex justify-center space-x-4">
